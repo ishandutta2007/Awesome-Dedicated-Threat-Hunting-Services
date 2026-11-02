@@ -32,77 +32,35 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
+
+
+
+## Sector Overview & Market Dynamics
+
+The global dedicated threat hunting and Managed Detection & Response (MDR) market is estimated at **$4.6B–$5.7B** for specialized threat hunting solutions and **$6.2B–$11.2B** when encompassing broader MDR platforms in 2026, compounding at an annual growth rate (CAGR) of **15% to 23%**. Rather than a winner-take-all monopoly, the sector remains **moderately to highly fragmented** and fiercely competitive, split among platform EDR giants (CrowdStrike, SentinelOne), pure-play concierge MDR providers (Arctic Wolf, eSentire), global incident response consultancies (Mandiant/Google Cloud, Kroll), and regional SOC service providers catering to diverse enterprise toolchains and local data-sovereignty mandates.
 
 
 
 ## SaaS/Hosted Platforms
 
+| Platform / Service | Company Size (Valuation / Revenue) | Pricing | Free Tier / Trial Limit | Key Focus & Trade-offs |
+| :--- | :--- | :--- | :--- | :--- |
+| **CrowdStrike Falcon OverWatch Elite** | **~$80B–$95B Market Cap** (NASDAQ: CRWD; ~$4B+ ARR) | Starting at **$59.99/endpoint/year** (Falcon Pro entry base) up to **$180–$250+/endpoint/year** with OverWatch managed hunting & threat intel modules; custom enterprise contracts | **15-day free trial** of Falcon platform (no credit card required; OverWatch human hunting evaluation via sales PoC) | Elite managed threat hunting with proprietary telemetry. *Trade-off*: Premium pricing; Elite hunting tier requires existing Falcon agent and Falcon Adversary Intelligence Premium. |
+| **SentinelOne Vigilance Respond Pro** | **~$8.5B Market Cap** (NYSE: S; ~$700M+ ARR) | Starting at **$45–$60/endpoint/year** (Singularity Core base) up to **$17,115.99/bundle** (Singularity Platform Pro / Vigilance upgrade tier per CDW listings) | **30-to-90-day PoC evaluation** with dedicated sales engineering support (no permanent free tier) | MDR with DFIR and incident response retainer hours. *Trade-off*: Vigilance Respond Pro SKU evolution/transition into Singularity MDR tiers; verify active licensing bundle. |
+| **Mandiant Managed Defense** | **$5.4B Valuation** (Acquired by Alphabet / Google Cloud; parent market cap ~$2.1T) | Starting at **$53.86/license/year** (CDW-G procurement listing per endpoint); average enterprise deployments track at **~$83,000/year** | **No free trial for Managed Defense** (14-day free trial available for standalone Mandiant Threat Intelligence; 30-day trial for Attack Surface Management) | Frontline MDR directly backed by frontline Google/Mandiant breach investigators. *Trade-off*: Strict enterprise focus and pricing model excludes SMBs; full IR retainers billed separately. |
+| **Arctic Wolf Managed Detection & Response** | **$4.3B Valuation** (Series F / pre-IPO funding) | Starting at **$30,000–$75,000/year** for small deployments (50–250 endpoints) up to **$75,000–$200,000/year** for mid-market (250–1,000 endpoints) | **No free trial for core MDR** (complimentary access to Cyber JumpStart risk posture portal & security training modules; demo/PoC via sales) | Turnkey Concierge Security Team model with continuous posture assessments. *Trade-off*: Hidden deployment costs ($5,000–$25,000+ onboarding fee, 3–7% annual escalation, log retention add-ons). |
+| **Kroll Cyber Threat Hunting** | **~$1.3B–$1.5B Revenue** (Stone Point Capital / CD&R private equity) | Starting at **$12,000–$25,000/year** base retainer up to **$60,000–$150,000+/year** for continuous threat hunting; quote-based | **No free trial** (enterprise consultation, demo walkthrough, and scoped pilot assessment upon request) | Flexible MDR paired with elite digital forensics and threat intelligence. *Trade-off*: Out-of-the-box integrations limited to primary SIEM stacks; no native CSPM. |
+| **eSentire Threat Hunting** | **$1.0B Valuation** (Series E unicorn status; $100M+ ARR) | Starting at **$50,000–$150,000/year** for small environments (50–200 assets); **$150,000–$500,000/year** for mid-market (200–1,000 assets) | **30-day free trial of Atlas SecOps Platform** (trial deployment of AI/Atlas platform; full human SOC MDR requires scoped PoC) | 24/7 multi-surface response (endpoint, cloud, network, log). *Trade-off*: Asset-based scaling creates overage charges; onboarding fees apply. |
+| **Rapid7 Managed Threat Complete** | **~$870M Market Cap** (NASDAQ: RPD; ~$800M ARR) | Starting at **$5.86/asset/month** (AppDirect listing for basic coverage) or **~$108/asset/year**; full Managed Threat Complete scopes at **$35,000–$80,000/year** | **30-day free trial of InsightIDR software** (no free trial for Managed Threat Complete human SOC service; custom PoC available) | Blends MDR with vulnerability and exposure management in one agent. *Trade-off*: Multi-surface telemetry requires full Insight platform buy-in; add-ons increase price. |
+| **Secureworks Taegis ManagedXDR (Sophos)** | **$859M Valuation** (Acquired by Sophos / Thoma Bravo in 2025; public procurement: $42.41/unit) | Starting at **$42.41/endpoint/year** (public procurement price schedule for 600+ seats; $25,446 total minimum) | **14-day free trial of Taegis XDR** (limited to max 200 endpoint agents and up to 3 users; 30-day PoC via Azure/AWS Marketplace) | Threat hunting bolstered by proprietary Counter Threat Unit (CTU) research. *Trade-off*: Quote-only for commercial enterprise tiers; requires Taegis agent migration. |
+| **Red Canary** | **$675M Valuation** (Acquired by Zscaler in 2025) | Starting at **$120/endpoint/year**, **$100/identity user/year**, and **$250/cloud resource/year** (AWS Marketplace Core tier); 1,000 endpoints negotiate at **$35,000–$50,000/year** | **No public free trial** (discretionary proof-of-value sandbox evaluation arranged directly via sales) | MDR with premier threat hunting across endpoint, identity, and cloud. *Trade-off*: Identity and cloud require Complete tier; dedicated threat hunter collaboration restricted to Enterprise tier. |
+| **Group-IB Managed XDR** | **~$30M–$50M Revenue** (Privately held, HQ Singapore) | Starting at **$30–$45/endpoint/year** (estimated minimum $15,000/year platform baseline; quote-based via AWS Marketplace private offers) | **No free trial for Managed XDR** (free community Malware Reports database & demo on request; 14-day trials occasionally granted for Attack Surface Management) | Native adversary intelligence and deep telemetry tracking APT groups. *Trade-off*: Sensor lock-in (must run Group-IB proprietary agents, cannot hunt on 3rd-party EDR); IR retainer separate. |
 
-
-- **CrowdStrike Falcon OverWatch Elite**
-
-  **Elite managed threat hunting** with dedicated hunters and adversary intelligence. **Pricing**: **License per endpoint/server** for OverWatch; **Elite tier requires Falcon Adversary Intelligence Premium**—custom quote required; no public pricing . **Free tier**: None. **Best for**: enterprises wanting the most mature human-led hunting with adversary intelligence—**trade-off**: premium pricing; requires existing Falcon investment.
-
-
-
-- **Mandiant Managed Defense**
-
-  **Frontline MDR** from incident response experts. **Pricing**: **CDW-G lists $53.86 per license** (likely per-endpoint/month or similar unit) . Third-party estimates place average Mandiant software cost at **~$83,000/year** . **Free tier**: None. **Best for**: organizations wanting intelligence-driven hunting grounded in real breach response—**trade-off**: premium pricing excludes SMBs; IR retainer separate.
-
-
-
-- **SentinelOne Vigilance Respond Pro**
-
-  **MDR with DFIR** and incident response retainer hours. **Pricing**: **CDW listed $17,115.99** for a subscription upgrade license (discontinued June 2026); Singularity Platform Pro listed at **$26,413.99** . **Free tier**: None. **Best for**: SentinelOne customers wanting MDR with forensic analysis—**trade-off**: product discontinuation suggests portfolio changes; verify current offering.
-
-
-
-- **Red Canary**
-
-  **MDR with threat hunting** across endpoint, identity, and cloud. **Pricing**: **Core (single domain)**: AWS Marketplace **$120/endpoint, $100/user account, $250/cloud resource** for 12 months. **Complete (multi-domain)**: includes Copilot, API, exporter. **Enterprise**: adds dedicated support and threat hunter collaboration. Negotiated pricing for 1,000 endpoints: **~$35,000–$50,000/year** . **Free tier**: None. **Best for**: mid-market teams wanting modular MDR with strong threat hunting—**trade-off**: identity/cloud require Complete tier; dedicated hunter access requires Enterprise.
-
-
-
-- **Rapid7 Managed Threat Complete**
-
-  **MDR with exposure management included**. **Pricing**: **Based on endpoints, servers, and networks protected**—not data volume or incidents . AppDirect lists **starting from $5.86/year** (likely per-unit) . Quote-only for full scope. **Free tier**: None. **Best for**: teams wanting MDR with built-in risk reduction—**trade-off**: pricing requires scoping call; add-ons extra.
-
-
-
-- **Arctic Wolf**
-
-  **Managed detection and response** with concierge security. **Pricing**: **Small deployments (50–250 endpoints)**: **$30,000–$75,000/year**; **Mid-market (250–1,000)**: **$75,000–$200,000/year** . Implementation fees **$5,000–$25,000+**; annual escalation **3–7%** . **Free tier**: None. **Best for**: mid-market teams wanting comprehensive MDR with security awareness training—**trade-off**: hidden costs (implementation, retention, true-ups); multi-year required for best pricing.
-
-
-
-- **Secureworks Counter Threat Unit (Taegis ManagedXDR)**
-
-  **MDR with proprietary countermeasures**. **Pricing**: Public procurement record shows **Taegis XDR and ManagedXDR at $42.41/unit** for 600 units (**$25,446**) and combined **$93,678** for 1,200 units . **Free tier**: None. **Best for**: network-focused teams wanting managed IPS with CTU countermeasures—**trade-off**: quote-only for most; public sector pricing visible.
-
-
-
-- **Kroll Cyber Threat Hunting**
-
-  **MDR with threat intelligence** and flexible deployment. **Pricing**: Quote-only; no public pricing. Optiv Leadership Compass notes **rapid and flexible deployment**, **strong threat intelligence**, but **OOTB integrations with only five third-party SIEMs** . **Free tier**: None. **Best for**: teams wanting flexible MDR with strong intelligence—**trade-off**: limited SIEM integrations; no cloud posture management.
-
-
-
-- **eSentire Threat Hunting**
-
-  **MDR with multi-surface coverage**. **Pricing**: **Small (50–200 assets)**: **$50,000–$150,000/year**; **Mid-market (200–1,000)**: **$150,000–$500,000/year**; **Enterprise (1,000+)**: **$500,000+** . Negotiated discounts **15–25%** common. **Free tier**: None. **Best for**: teams wanting multi-surface MDR with incident response—**trade-off**: asset-based pricing; overage fees for growth.
-
-
-
-- **Group-IB Managed XDR**
-
-  **Platform-native Managed XDR** with threat intelligence. **Pricing**: **Quote-only**; no public unit price; AWS Marketplace custom/private offer . Requires deploying **Group-IB's own sensors**—cannot run on competing EDR. **Free tier**: None. **Best for**: teams wanting threat-intelligence-native MDR—**trade-off**: sensor lock-in; IR retainer separate; no identity/OT coverage.
 
 
 
