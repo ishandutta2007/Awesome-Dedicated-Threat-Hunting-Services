@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#0b1329"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+
+    <linearGradient id="radarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e056fd"/>
+      <stop offset="100%" stop-color="#686de0"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Pattern Grid -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f2d4d" stroke-width="0.75" stroke-opacity="0.45"/>
+    </pattern>
+
+    <!-- Keyframe Animations -->
+    <style>
+      @keyframes radarSweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; r: 120px; }
+        50% { opacity: 0.7; r: 150px; }
+      }
+      @keyframes targetPing {
+        0% { r: 4px; opacity: 1; }
+        100% { r: 24px; opacity: 0; }
+      }
+      @keyframes nodeFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-100px); }
+        100% { transform: translateY(420px); }
+      }
+      .sweep-group {
+        transform-origin: 1020px 210px;
+        animation: radarSweep 8s linear infinite;
+      }
+      .floating-node-1 {
+        animation: nodeFloat 4s ease-in-out infinite;
+      }
+      .floating-node-2 {
+        animation: nodeFloat 5s ease-in-out infinite 1.5s;
+      }
+      .floating-node-3 {
+        animation: nodeFloat 4.5s ease-in-out infinite 0.7s;
+      }
+      .ping-circle {
+        animation: targetPing 2.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+      }
+      .badge-text {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-weight: 600;
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)"/>
+  <rect width="1200" height="420" fill="url(#cyberGrid)"/>
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <circle cx="1020" cy="210" r="140" fill="#00f2fe" opacity="0.12" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.08;0.2;0.08" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="80" r="180" fill="#7f00ff" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Radar Threat Scope (Right Dynamic Element) -->
+  <g id="radarGroup">
+    <circle cx="1020" cy="210" r="150" fill="none" stroke="#1e3a66" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <circle cx="1020" cy="210" r="110" fill="none" stroke="#22487a" stroke-width="1.5"/>
+    <circle cx="1020" cy="210" r="70" fill="none" stroke="#22487a" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <circle cx="1020" cy="210" r="30" fill="none" stroke="#00f2fe" stroke-width="1" opacity="0.5"/>
+    <line x1="870" y1="210" x2="1170" y2="210" stroke="#1e3a66" stroke-width="1"/>
+    <line x1="1020" y1="60" x2="1020" y2="360" stroke="#1e3a66" stroke-width="1"/>
+
+    <!-- Rotating Sweep Beam -->
+    <g class="sweep-group">
+      <path d="M 1020 210 L 1170 210 A 150 150 0 0 0 1020 60 Z" fill="url(#radarGrad)" />
+      <line x1="1020" y1="210" x2="1170" y2="210" stroke="#00f2fe" stroke-width="2" filter="url(#glow)"/>
+    </g>
+
+    <!-- Detected Threats (Pings) -->
+    <g transform="translate(1070, 160)">
+      <circle class="ping-circle" cx="0" cy="0" r="4" fill="none" stroke="#ff3838" stroke-width="2"/>
+      <circle cx="0" cy="0" r="4" fill="#ff3838"/>
+      <text x="8" y="4" fill="#ff4d4d" class="badge-text" font-size="10">APT DETECTED</text>
+    </g>
+    <g transform="translate(980, 270)">
+      <circle class="ping-circle" cx="0" cy="0" r="3" fill="none" stroke="#00f2fe" stroke-width="1.5" style="animation-delay: 1.2s;"/>
+      <circle cx="0" cy="0" r="3" fill="#00f2fe"/>
+      <text x="8" y="3" fill="#00f2fe" class="badge-text" font-size="9">C2 ANOMALY</text>
+    </g>
+    <g transform="translate(950, 130)">
+      <circle cx="0" cy="0" r="2.5" fill="#f1c40f"/>
+      <text x="6" y="3" fill="#f1c40f" class="badge-text" font-size="8">HEURISTIC</text>
+    </g>
+  </g>
+
+  <!-- Left Content Area (Always in crisp foreground) -->
+  <g transform="translate(70, 0)">
+    <!-- Category Super-Badge -->
+    <g transform="translate(0, 52)">
+      <rect width="320" height="30" rx="15" fill="#13233f" stroke="#2a4a7b" stroke-width="1"/>
+      <circle cx="16" cy="15" r="5" fill="#00f2fe">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="32" y="20" fill="#00f2fe" class="badge-text">24/7 SOC &amp; ADVERSARY HUNTING</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="132" fill="#ffffff" class="title-text" font-size="44">
+      Dedicated Threat Hunting
+    </text>
+    <text x="0" y="178" fill="url(#cyberCyan)" class="title-text" font-size="40" filter="url(#cardGlow)">
+      Awesome Services &amp; Tools
+    </text>
+
+    <!-- Subtitle / Mission Statement -->
+    <text x="0" y="222" fill="#94a3b8" class="subtitle-text" font-size="17">
+      The definitive directory of commercial Managed Detection &amp; Response (MDR)
+    </text>
+    <text x="0" y="248" fill="#94a3b8" class="subtitle-text" font-size="17">
+      platforms and battle-tested open-source detection engineering frameworks.
+    </text>
+
+    <!-- Interactive / Dynamic Feature Pills in Foreground -->
+    <g transform="translate(0, 290)">
+      <!-- Pill 1: EDR / MDR -->
+      <g class="floating-node-1" transform="translate(0, 0)">
+        <rect width="150" height="42" rx="10" fill="#0e1b30" stroke="#1f3b64" stroke-width="1.2"/>
+        <circle cx="22" cy="21" r="6" fill="#00f2fe"/>
+        <text x="38" y="26" fill="#f1f5f9" class="badge-text">Elite MDR</text>
+      </g>
+
+      <!-- Pill 2: Open Source -->
+      <g class="floating-node-2" transform="translate(165, 0)">
+        <rect width="180" height="42" rx="10" fill="#0e1b30" stroke="#1f3b64" stroke-width="1.2"/>
+        <circle cx="22" cy="21" r="6" fill="#10b981"/>
+        <text x="38" y="26" fill="#f1f5f9" class="badge-text">Open-Source Hunts</text>
+      </g>
+
+      <!-- Pill 3: Threat Intelligence -->
+      <g class="floating-node-3" transform="translate(360, 0)">
+        <rect width="175" height="42" rx="10" fill="#0e1b30" stroke="#1f3b64" stroke-width="1.2"/>
+        <circle cx="22" cy="21" r="6" fill="#e056fd"/>
+        <text x="38" y="26" fill="#f1f5f9" class="badge-text">Adversary Intel</text>
+      </g>
+    </g>
+
+    <!-- Metric Footer Tagline -->
+    <g transform="translate(0, 368)">
+      <text x="0" y="0" fill="#64748b" class="badge-text" font-size="12">
+        CURATED WITH METRICS • PRICING TRANSPARENCY • COMMUNITY VERIFIED
+      </text>
+    </g>
+  </g>
+
+  <!-- High-tech Border Framing -->
+  <rect x="1" y="1" width="1198" height="418" rx="8" fill="none" stroke="#1b2a47" stroke-width="2"/>
+  <line x1="0" y1="2" x2="160" y2="2" stroke="url(#cyberCyan)" stroke-width="3" filter="url(#glow)"/>
+  <line x1="1040" y1="418" x2="1200" y2="418" stroke="url(#cyberCyan)" stroke-width="3" filter="url(#glow)"/>
+</svg>
