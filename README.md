@@ -66,87 +66,87 @@ The global dedicated threat hunting and Managed Detection & Response (MDR) marke
 
 ## 💻 Open-Source GitHub Projects
 
-*Sorted in descending order by GitHub Stars ⭐. Each tool includes live badges linking to its stargazer metrics.*
+*Sorted in descending order by GitHub_Stars ⭐. Each tool includes live badges linking to its stargazer metrics.*
 
-### 1. [osquery](https://github.com/osquery/osquery) [![GitHub stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers) 💻
+### 1. [osquery](https://github.com/osquery/osquery) [![GitHub_Stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers) 💻
 - **Description**: SQL-powered operating system instrumentation, monitoring, and analytics framework. Osquery exposes an operating system as a high-performance relational database, allowing hunters to write SQL queries to explore devices, audit running processes, check loaded kernel modules, inspect active network connections, and unmask rootkits.
 - **License**: Apache 2.0
 - **Tech Stack**: C++, SQLite, CMake
 - **Best For**: Real-time cross-platform endpoint state interrogation, fleetwide hunt queries, and baseline configuration auditing.
 
-### 2. [Wazuh](https://github.com/wazuh/wazuh) [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) 🛡️
+### 2. [Wazuh](https://github.com/wazuh/wazuh) [![GitHub_Stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers) 🛡️
 - **Description**: Free and open-source unified XDR and SIEM platform providing endpoint security, threat intelligence, security posture assessment, and compliance monitoring. Combines lightweight endpoint agents with a centralized analytics server to execute automated rules, file integrity monitoring (FIM), and active responses.
 - **License**: GPL-2.0
 - **Tech Stack**: C, Python, OpenSearch / Elasticsearch
 - **Best For**: Teams seeking a self-hosted full-stack open-source SOC core that unifies endpoint telemetry, log monitoring, and threat detection.
 
-### 3. [Sigma](https://github.com/SigmaHQ/sigma) [![GitHub stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers) 📜
+### 3. [Sigma](https://github.com/SigmaHQ/sigma) [![GitHub_Stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers) 📜
 - **Description**: Generic signature format for SIEM and log analysis systems — the de facto open standard for vendor-agnostic detection engineering. Allows hunters and security researchers to describe relevant log events in structured YAML and convert them dynamically (via pySigma) into target queries for Splunk, Elastic, QRadar, Microsoft Sentinel, and more.
 - **License**: Detection Rule License (Specification: CC-BY-SA-4.0)
 - **Tech Stack**: YAML, Python (pySigma compiler)
 - **Best For**: Detection engineers writing portable, community-driven detection rules to operationalize across multiple SIEM or data lake backends.
 
-### 4. [YARA](https://github.com/VirusTotal/yara) [![GitHub stars](https://img.shields.io/github/stars/VirusTotal/yara?style=social&color=white)](https://github.com/VirusTotal/yara/stargazers) 🧬
+### 4. [YARA](https://github.com/VirusTotal/yara) [![GitHub_Stars](https://img.shields.io/github/stars/VirusTotal/yara?style=social&color=white)](https://github.com/VirusTotal/yara/stargazers) 🧬
 - **Description**: The pattern matching swiss-knife for malware researchers, reverse engineers, and forensic threat hunters. YARA allows security practitioners to create textual or binary pattern descriptions to identify, classify, and match malicious code samples, memory dumps, and suspicious disk files.
 - **License**: BSD 3-Clause
 - **Tech Stack**: C, Python bindings
 - **Best For**: In-memory artifact scanning, binary triage, file classification, and endpoint artifact collection.
 
-### 5. [Zeek](https://github.com/zeek/zeek) [![GitHub stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers) 🌐
+### 5. [Zeek](https://github.com/zeek/zeek) [![GitHub_Stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers) 🌐
 - **Description**: Powerful network security monitoring (NSM) engine that translates raw packet streams into structured, high-level transaction logs, behavioral metrics, and fully parsed application-layer protocols (DNS, HTTP, TLS, SSH, etc.). Features a Turing-complete domain-specific scripting language for custom hunt logic.
 - **License**: BSD 3-Clause
 - **Tech Stack**: C++, Zeek Script
 - **Best For**: Deep network threat hunting, protocol anomaly detection, lateral movement tracing, and passive traffic behavioral analysis.
 
-### 6. [Suricata](https://github.com/OISF/suricata) [![GitHub stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers) 🚨
+### 6. [Suricata](https://github.com/OISF/suricata) [![GitHub_Stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers) 🚨
 - **Description**: High-performance, mature Network IDS, IPS, and Network Security Monitoring (NSM) engine capable of multi-gigabit inspection. Employs multi-threaded processing, native hardware acceleration, and integrated Lua scripting alongside standard signature formats (Emerging Threats, Snort rules) to inspect malicious network flows.
 - **License**: GPL-2.0
 - **Tech Stack**: C, Rust
 - **Best For**: Line-rate network perimeter intrusion detection, signature-based hunting, and automated network traffic extraction.
 
-### 7. [MISP (Malware Information Sharing Platform)](https://github.com/MISP/MISP) [![GitHub stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) 🤝
+### 7. [MISP (Malware Information Sharing Platform)](https://github.com/MISP/MISP) [![GitHub_Stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers) 🤝
 - **Description**: Leading open-source threat intelligence platform (TIP) for sharing, storing, and correlating Indicators of Compromise (IOCs) of targeted attacks, threat actors, and financial fraud. Facilitates seamless sharing communities, taxonomies, MITRE ATT&CK galaxy mappings, and automated feeds.
 - **License**: AGPL-3.0
 - **Tech Stack**: PHP, Python, MySQL, Redis
 - **Best For**: Centralized threat intelligence lifecycle management and feeding contextual adversary indicators into hunting pipelines.
 
-### 8. [Security Onion](https://github.com/Security-Onion-Solutions/securityonion) [![GitHub stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers) 🧅
+### 8. [Security Onion](https://github.com/Security-Onion-Solutions/securityonion) [![GitHub_Stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers) 🧅
 - **Description**: Complete Linux appliance and enterprise distribution designed for threat hunting, network security monitoring, and log management. Packages Suricata, Zeek, Wazuh, Elastic/OpenSearch, CyberChef, and Playbook into an integrated hunting workbench.
 - **License**: AGPL-3.0 / Elastic License
 - **Tech Stack**: Linux, Python, Docker, Go
 - **Best For**: Rapidly standing up an all-in-one hunting SOC environment with full packet capture (FPC), endpoint agents, and SIEM dashboards.
 
-### 9. [Volatility 3](https://github.com/volatilityfoundation/volatility3) [![GitHub stars](https://img.shields.io/github/stars/volatilityfoundation/volatility3?style=social&color=white)](https://github.com/volatilityfoundation/volatility3/stargazers) 🧠
+### 9. [Volatility 3](https://github.com/volatilityfoundation/volatility3) [![GitHub_Stars](https://img.shields.io/github/stars/volatilityfoundation/volatility3?style=social&color=white)](https://github.com/volatilityfoundation/volatility3/stargazers) 🧠
 - **Description**: The industry-standard memory forensics framework. Completely redesigned in Python 3 to extract digital artifacts from volatile system memory (RAM) dumps across Windows, Linux, and macOS systems to expose code injection, hidden processes, API hooks, and memory-only malware.
 - **License**: Volatility Software License (VSL)
 - **Tech Stack**: Python 3
 - **Best For**: Advanced DFIR analysis, rootkit detection, unpacking fileless malware, and volatile memory investigation.
 
-### 10. [Velociraptor](https://github.com/Velocidex/velociraptor) [![GitHub stars](https://img.shields.io/github/stars/Velocidex/velociraptor?style=social&color=white)](https://github.com/Velocidex/velociraptor/stargazers) 🦖
+### 10. [Velociraptor](https://github.com/Velocidex/velociraptor) [![GitHub_Stars](https://img.shields.io/github/stars/Velocidex/velociraptor?style=social&color=white)](https://github.com/Velocidex/velociraptor/stargazers) 🦖
 - **Description**: Next-generation digital forensics, endpoint visibility, and threat hunting platform. Driven by **VQL (Velociraptor Query Language)**, it enables security teams to surgically query and collect detailed endpoint forensic artifacts across thousands of distributed machines in seconds.
 - **License**: Apache 2.0
 - **Tech Stack**: Go
 - **Best For**: Targeted live endpoint forensics, distributed forensic artifact hunting at enterprise scale, and proactive baseline queries.
 
-### 11. [TheHive](https://github.com/TheHive-Project/TheHive) [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) 🐝
+### 11. [TheHive](https://github.com/TheHive-Project/TheHive) [![GitHub_Stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers) 🐝
 - **Description**: Scalable, open-source Security Incident Response Platform (SIRP) tightly integrated with MISP and Cortex. Enables SOC teams, incident responders, and forensic analysts to collaborate on case investigations, track observables, and assign mitigation tasks. *(Note: v3/v4 open-source under AGPL; later versions transitioned to dual-license)*.
 - **License**: AGPL-3.0 (v3/v4)
 - **Tech Stack**: Scala, AngularJS / Vue, Elasticsearch
 - **Best For**: SOC case management, collaborative incident response workflows, and investigation task distribution.
 
-### 12. [Elastic Detection Rules](https://github.com/elastic/detection-rules) [![GitHub stars](https://img.shields.io/github/stars/elastic/detection-rules?style=social&color=white)](https://github.com/elastic/detection-rules/stargazers) 🔎
+### 12. [Elastic Detection Rules](https://github.com/elastic/detection-rules) [![GitHub_Stars](https://img.shields.io/github/stars/elastic/detection-rules?style=social&color=white)](https://github.com/elastic/detection-rules/stargazers) 🔎
 - **Description**: Production-grade threat detection rules maintained and open-sourced by Elastic's Intelligence & Analytics team. Contains hundreds of battle-tested detection rules written in EQL (Event Query Language), ES|QL, and KQL mapped to MITRE ATT&CK techniques across cloud, Linux, macOS, and Windows.
 - **License**: Elastic License v2
 - **Tech Stack**: Python, EQL, TOML
 - **Best For**: Elastic Security / SIEM practitioners seeking community-validated behavioral detection logic and adversary hunt queries.
 
-### 13. [DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI) [![GitHub stars](https://img.shields.io/github/stars/sans-blue-team/DeepBlueCLI?style=social&color=white)](https://github.com/sans-blue-team/DeepBlueCLI/stargazers) 🌊
+### 13. [DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI) [![GitHub_Stars](https://img.shields.io/github/stars/sans-blue-team/DeepBlueCLI?style=social&color=white)](https://github.com/sans-blue-team/DeepBlueCLI/stargazers) 🌊
 - **Description**: PowerShell tool designed to quickly analyze Windows event logs (EVTX files) for signs of adversary activity, lateral movement, credential dumping (Mimikatz), process injection, and obfuscated PowerShell/WMIC commands.
 - **License**: GPL-3.0
 - **Tech Stack**: PowerShell
 - **Best For**: Triage hunting on Windows hosts, rapid offline EVTX event analysis, and incident triage without specialized SIEM infrastructure.
 
-### 14. [Cortex](https://github.com/TheHive-Project/Cortex) [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers) ⚡
+### 14. [Cortex](https://github.com/TheHive-Project/Cortex) [![GitHub_Stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers) ⚡
 - **Description**: Powerful observable analysis and active response engine. Cortex enables analysts to automate the enrichment of indicators (IPs, hashes, URLs, domain names) using dozens of modular analyzers and active response responders via a unified REST API.
 - **License**: AGPL-3.0
 - **Tech Stack**: Scala, Python
